@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MoviesSlider from "ui/MoviesSlider";
+import MediaSlider from "ui/MediaSlider";
 import Banner from "ui/Banner";
 import Header from "ui/Header";
 
@@ -9,15 +9,24 @@ function HomeScreen() {
     <div>
       <Header />
       <Banner />
-      <MoviesSlider
+      <MediaSlider
+        mediaType="tv"
         title="NETFLIX ORIGINALS"
         path="/discover/tv"
         params={{ with_networks: 213 }}
         isLarge
       />
-      <MoviesSlider title="Trending Now" path="/trending/all/week" />
-      <MoviesSlider title="Top Rated" path="/movie/top_rated" />
-      <MoviesSlider
+      <MediaSlider
+        title="Trending Now"
+        path="/trending/all/week"
+      />
+      <MediaSlider
+        mediaType="movie"
+        title="Top Rated"
+        path="/movie/top_rated"
+      />
+      <MediaSlider
+        mediaType="movie"
         title="Action Movies"
         path="/discover/movie"
         params={{ with_genre: 28 }}

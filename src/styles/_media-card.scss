@@ -1,24 +1,19 @@
-.movies-slider {
-  color: white;
-  padding-top: 30px;
+.media-card {
+  position: relative;
+  cursor: pointer;
+  transition: 360ms;
 
-  &__title {
-    margin-top: 0;
-    padding: 0 20px;
-  }
-
-  &__cards {
-    display: flex;
-    overflow-x: scroll;
-    padding: 10px;
-
-    &::-webkit-scrollbar {
-      // Hides scrollbar in horizontal slider
-      display: none;
+  &:hover {
+    transform: scale(1.1);
+    
+    .media-card {
+      &__cover {
+        opacity: 1;
+      }
     }
   }
 
-  &__card {
+  &__poster {
     flex: 0 0 auto;
     object-fit: cover;
     width: auto;
@@ -28,23 +23,6 @@
 
     &--large {
       height: 250px;
-    }
-  }
-
-  &__item {
-    position: relative;
-
-    &:hover {
-      .movies-slider {
-        &__card {
-          transform: scale(1.1);
-        }
-
-        &__cover {
-          transform: scale(1.1);
-          opacity: 1;
-        }
-      }
     }
   }
 
